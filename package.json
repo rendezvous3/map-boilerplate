@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all --parallel dev:*",
-    "dev:server": "nodemon --watch build --exec \"node server/bundle.js\"",
-    "dev:build-server": "webpack --config webpack.server.js --watch"
+    "old:server": "nodemon --watch build --exec \"node server/bundle.js\"",
+    "dev:server": "nodemon --watch server --watch public --exec \"node server/bundle.js\"",
+    "dev:build-server": "webpack --config webpack.server.js --watch",
+    "dev:build-client": "webpack --config webpack.client.js --watch"
   },
   "author": "",
   "license": "ISC",
@@ -22,17 +24,22 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "body-parser": "^1.19.0",
+    "css-loader": "^3.4.2",
     "express": "^4.17.1",
+    "mini-css-extract-plugin": "^0.9.0",
     "morgan": "^1.9.1",
+    "node-sass": "^4.13.1",
     "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2",
+    "sass-loader": "^8.0.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
   }
 }
+
