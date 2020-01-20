@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import { renderToString } from "react-dom/server";
+import render from './render';
 
 const app = express();
 const PORT = 8080;
@@ -14,22 +15,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
 
-const content = "Hello World!";
-
 app.get("*", (req, res) => {
-  res.send(`
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset='utf-8'>
-      <title>aidride</title>
-    </head>
-    <body>
-      <div id="app">${content}</div>
-      <script src="/bundle.js"></script>
-    </body>
-  </html>
-  `);
+  res.send(render(req, res));
 });
 
 app.listen(PORT, () => {
