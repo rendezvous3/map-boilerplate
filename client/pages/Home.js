@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Home(props){
-  return(<div>Home Page</div>)
+  return(<div onClick={()=>console.log("clicked!!!")}>Home Page</div>)
 }
 
 export default {
