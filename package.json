@@ -36,6 +36,7 @@
     "react-google-maps": "^9.4.5",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2",
+    "recompose": "^0.30.0",
     "sass-loader": "^8.0.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",

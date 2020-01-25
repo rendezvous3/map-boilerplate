@@ -7,7 +7,7 @@ import Routes from "../client/routes";
 export default (req, res, context) => {
   const content = renderToString(
     <StaticRouter location={req.path} context={context}>
-      <div>{renderRoutes(Routes)}</div>
+      <div className="router-config-wrap">{renderRoutes(Routes)}</div>
     </StaticRouter>
   );
 
@@ -21,6 +21,7 @@ export default (req, res, context) => {
       <meta name="author" content>
       <meta name='viewport' content='width=device-width initial-scale=1.0'>
       <link rel="stylesheet" href="/style.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
     </head>
     <body>
       <div id="app">${content}</div>
