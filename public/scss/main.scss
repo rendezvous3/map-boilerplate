@@ -1,3 +1,26 @@
+$dark-1: #21242b;
+$dark-2: #333739;
+$color-cobalt: #011f57;
+$color-blue-alt: #3e606f;
+$color-blue-alt-1: #2f9591;
+$plavlac: #61c0e2;
+$sivlac: #58647b;
+$crnlac: #1b1f24;
+$plavosivlac: #1a4559;
+$color-green-1: #2ecc71;
+$color-grey-light-1: #f7f1f1; 
+$color-grey-light-2: #e8e0e0; 
+$color-grey-light-3: #fcfcfc; 
+$background-sidebar-header: #1b1f24;
+$color-sidebar-header: #fcfcfc;
+$color-list-itme-active: #1a4559;
+// #161616
+// sivlac 58647b
+
+div {
+  scrollbar-color: #1a4559 #1b1f24;;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +41,7 @@ body {
   z-index: 2;
   height: 75rem;
   width: 42rem;
-  background-color:white;
+  background-color: $background-sidebar-header;
   margin-top: 7rem;
   margin-left: 5rem;
   overflow-y :scroll;
@@ -28,11 +51,15 @@ body {
   z-index: 2;
   height: 7rem;
   width: 100%;
-  background-color: white;
+  background-color: $background-sidebar-header;
 }
 
 .list-item {
   padding: 1rem 2rem;
+  color: $color-sidebar-header;
+  &-active {
+    color: $color-cobalt;
+  }
   &-title {
     font-size: 1.7rem;
     font-weight: 400;
@@ -40,5 +67,17 @@ body {
   &-desc {
     font-weight: 300;
     font-size: 1.4rem;
+  }
+  &:hover {
+    background: $color-list-itme-active;
+    transition: background 0.2s;
+  }
+}
+
+.info-window {
+  padding: 1rem 0.5rem;
+  &-title {
+    font-weight: 400;
+    font-size: 1.4rem
   }
 }
